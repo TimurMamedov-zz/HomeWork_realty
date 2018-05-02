@@ -24,7 +24,7 @@ int main(int argc, char** argv)
     {
         auto sample = getSampleFromLine(line);
         if(sample(0) != -1)
-            samples.emplace_back(std::move(sample ));
+            samples.emplace_back(std::move(sample));
     }
 
     test.set_number_of_centers(N);

@@ -37,9 +37,12 @@ sample_type getSampleFromLine(const std::string& line)
     }
     catch(...)
     {
-        for(auto i = std::size_t{0}; i < tokens.size(); i++)
-            std::cerr << tokens[i] << ";";
-        std::cerr << tokens[tokens.size() - 1] << "\n";
+        if(!tokens.empty())
+        {
+            for(auto i = std::size_t{0}; i < tokens.size(); i++)
+                std::cerr << tokens[i] << ";";
+            std::cerr << tokens[tokens.size() - 1] << "\n";
+        }
         m(0) = -1;
     }
 
